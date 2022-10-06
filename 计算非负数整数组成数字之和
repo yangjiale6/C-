@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+int digitsum(unsigned int num)
+{
+	if (num > 9)
+	{
+		return digitsum(num / 10) + num % 10;
+	}
+	else 
+	{
+		return num;
+	}
+}
+int main()
+{
+	unsigned int num = 0;
+	scanf_s("%d", &num);
+	int ret = digitsum(num);
+	printf("ret=%d", ret);
+	return 0;
+}
