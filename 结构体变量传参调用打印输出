@@ -1,0 +1,30 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+typedef struct Stu
+{
+	char name[20];
+	int age;
+	char tele[20];
+	char sex[10];
+};
+void print1(Stu s)
+{
+	printf("name:%s\n", s.name);
+	printf("age:%d\n", s.age);
+	printf("tele:%s\n", s.tele);
+	printf("sex:%s\n", s.sex);
+}
+void print2(Stu* p)
+{
+	printf("name:%s\n", p->name);
+	printf("age:%d\n", p->age);
+	printf("tele:%s\n", p->tele);
+	printf("sex:%s\n", p->sex);
+}
+int main()
+{
+	Stu s = { "李四",40,"1559886688","男" };
+		print1(s);
+		print2(&s);
+		return 0;
+}
