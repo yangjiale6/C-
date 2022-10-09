@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    int hour, minute, k, c;
+    scanf("%d:%d%d", &hour, &minute, &k);
+    hour=(hour+(k+minute)/60)%24;
+    minute=(k+minute)%60;
+    printf("%02d:%02d",hour,minute);
+    return 0;
+}
