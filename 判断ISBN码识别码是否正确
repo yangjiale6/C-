@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    char arr[13];
+    int i,j;
+    int s=0;
+    scanf("%s",arr);
+    for(i=0,j=1;i<11;i++)
+    {
+        if(arr[i]!= '-')
+        {
+          s+=(arr[i]-'0')*j;
+          j++;
+        }
+    }
+    int m=s%11;
+    if(m==arr[12]-'0'||(m==10&&arr[12]=='X'))
+    {
+        printf("Right\n");
+    }
+    else{
+       if(m==10)
+       {
+           for(int i=0;i<12;i++)
+           {
+               printf("%c",arr[i]);
+           }
+           printf("X");
+       }
+       else{
+        for(int i=0;i<12;i++)
+           {
+               printf("%c",arr[i]);
+           }
+           printf("%d",m);
+
+       }
+
+
+    }
+
+}
