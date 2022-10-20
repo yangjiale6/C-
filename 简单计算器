@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    double a,b;
+    char ch;
+    while(scanf("%lf %c %lf",&a,&ch,&b)!=EOF)
+    {
+        if(ch=='+'||ch=='-'||ch=='*'||ch=='/')
+        {
+            if(ch=='+')
+                printf("%.4lf%c%.4lf=%.4lf\n",a,ch,b,a+b);
+                else if(ch=='-')
+                    printf("%.4lf%c%.4lf=%.4lf\n",a,ch,b,a-b);
+            else if(ch=='*')
+                printf("%.4lf%c%.4lf=%.4lf\n",a,ch,b,a*b);
+            else
+            {
+                if(b==0.0)
+                    printf("Wrong!Division by zero!\n");
+                else
+                    printf("%.4lf%c%.4lf=%.4lf\n",a,ch,b,a/b);
+            }
+        }
+        else
+            printf("Invalid operation!\n");
+    }
+    return 0;
+}
